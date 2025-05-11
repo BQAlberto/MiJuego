@@ -65,6 +65,15 @@ public class PauseScreen implements Screen {
             }
         });
 
+        VisTextButton menuButton = new VisTextButton("MAIN MENU");
+        menuButton.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                dispose();
+                game.setScreen(new MainMenuScreen(game));
+            }
+        });
+
         table.row();
         table.add(title).center();
         table.row();
@@ -73,6 +82,8 @@ public class PauseScreen implements Screen {
         table.add(configButton).center();
         table.row();
         table.add(quitButton);
+        table.row();
+        table.add(menuButton).center();
 
         Gdx.input.setInputProcessor(stage);
     }
