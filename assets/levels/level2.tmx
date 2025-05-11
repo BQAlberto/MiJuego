@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="80" height="20" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="18">
+ <tileset firstgid="1" source="turtle.tsx"/>
+ <tileset firstgid="2" source="tileset.tsx"/>
+ <tileset firstgid="1026" source="coin.tsx"/>
+ <tileset firstgid="1027" name="Heart" tilewidth="23" tileheight="23" tilecount="1" columns="1">
+  <properties>
+   <property name="type" value="heart"/>
+  </properties>
+  <image source="../textures/heart.png" width="23" height="23"/>
+ </tileset>
+ <tileset firstgid="1028" source="Heart.tsx"/>
+ <layer id="4" name="background" width="80" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0LEJACAMAEHR/cHGwdzIDWwskuAd/ALfGgAAAMDdGjXKKvpL9X+71yir2WuUVfQX//7+x5sDQ6ecWw==
+  </data>
+ </layer>
+ <layer id="3" name="ground" width="80" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt0DEOwCAIhWFST+qZbet1hKEbC3bAhP9LWEQT3xMBAAAAAAA4S7+yf5BrN3/l3iw7vcX86ex7X1Ekt3e3am+G7uJGE7l1Hp1XZ7b8M293qgU0uyk7
+  </data>
+ </layer>
+ <objectgroup id="5" name="items">
+  <object id="1" gid="1026" x="157.5" y="486.5" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="2" gid="1026" x="240.167" y="429.167" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="3" gid="1026" x="325.5" y="389.167" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="4" gid="1026" x="432.167" y="374.5" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="5" gid="1026" x="485.167" y="470.5" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="6" gid="1026" x="666.833" y="465.167" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="7" gid="1026" x="750.833" y="422.5" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="8" gid="1026" x="832.167" y="385.167" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="9" gid="1026" x="933.5" y="349.167" width="21" height="27">
+   <properties>
+    <property name="type" value="coin"/>
+   </properties>
+  </object>
+  <object id="14" gid="1028" x="642.333" y="538.667" width="23" height="23">
+   <properties>
+    <property name="type" value="heart"/>
+   </properties>
+  </object>
+  <object id="15" gid="1028" x="262.333" y="542.667" width="23" height="23">
+   <properties>
+    <property name="type" value="heart"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="7" name="enemies">
+  <object id="10" gid="1" x="482.5" y="416.167" width="35" height="29">
+   <properties>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="11" gid="1" x="138.5" y="400.167" width="35" height="29">
+   <properties>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="12" gid="1" x="833.167" y="241.5" width="35" height="29">
+   <properties>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+  <object id="13" gid="1" x="641.167" y="384.167" width="35" height="29">
+   <properties>
+    <property name="type" value="enemy"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
