@@ -16,6 +16,7 @@ import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.TimeUtils;
 import com.svalero.mijuego.characters.Drop;
 import com.svalero.mijuego.characters.Player;
+import com.svalero.mijuego.manager.ConfigurationManager;
 import com.svalero.mijuego.manager.R;
 import com.svalero.mijuego.screen.GameScreen;
 import com.svalero.mijuego.screen.MainMenuScreen;
@@ -40,6 +41,7 @@ public class MiJuego extends Game {
 
     @Override
     public void create() {
+        ConfigurationManager.loadPreferences();
         setScreen(new SplashScreen(this));
         batch = new SpriteBatch();
         font = new BitmapFont();

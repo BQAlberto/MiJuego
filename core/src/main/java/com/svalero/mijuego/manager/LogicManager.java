@@ -98,12 +98,15 @@ public class LogicManager {
 
         for (Enemy enemy : enemies) {
             if (enemy.getRect().overlaps(player.getRect())) {
-                if (player.getVelocity().y >= 0) {
-                    player.taketurtle();
-                    if (ConfigurationManager.isSoundEnabled()) {
-                        R.getSound("drop").play();
-                        //TODO Colision con enemigo
-                    }
+
+                if (ConfigurationManager.isEasyMode()) {
+                    continue; // En modo fácil, las tortugas no hacen daño nunca
+                }
+
+                // En modo difícil, cualquier contacto con tortuga quita vida
+                player.taketurtle();
+                if (ConfigurationManager.isSoundEnabled()) {
+                    R.getSound("drop").play();
                 }
             }
         }

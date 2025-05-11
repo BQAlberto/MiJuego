@@ -13,6 +13,7 @@ import com.kotcrab.vis.ui.widget.VisLabel;
 import com.kotcrab.vis.ui.widget.VisTable;
 import com.kotcrab.vis.ui.widget.VisTextButton;
 import com.svalero.mijuego.MiJuego;
+import com.svalero.mijuego.manager.ConfigurationManager;
 
 import static com.svalero.mijuego.util.Constants.GAME_NAME;
 
@@ -57,6 +58,16 @@ public class ConfigurationScreen implements Screen {
             }
         });
 
+        VisCheckBox easyModeCheckBox = new VisCheckBox("MODO FÁCIL (tortugas no restan vidas)");
+        easyModeCheckBox.setChecked(ConfigurationManager.isEasyMode());
+
+        easyModeCheckBox.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                ConfigurationManager.setEasyMode(easyModeCheckBox.isChecked());
+            }
+        });
+
         VisTextButton backButton = new VisTextButton("BACK");
         backButton.addListener(new ClickListener() {
             @Override
@@ -70,6 +81,8 @@ public class ConfigurationScreen implements Screen {
         table.add(title).center();
         table.row();
         table.add(checkSound).center();
+        table.row();
+        table.add(easyModeCheckBox).center();
         table.row();
         table.add(backButton).center();
 
